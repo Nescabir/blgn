@@ -2,8 +2,8 @@
 
 .App {
     display: flex;
+    min-height: 100vh;
     flex-direction: column;
-    height: 100vh;
     & > *:nth-child(2) {
         padding: 2% 10%;
         flex-grow: 1;

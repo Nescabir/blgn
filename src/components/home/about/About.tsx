@@ -32,6 +32,12 @@ function About() {
                     <div className="table-item">
                         Grenoble, France
                     </div>
+                    <div className="table-item">
+                        Languages :
+                    </div>
+                    <div className="table-item">
+                        French, English
+                    </div>
                 </div>
                 <div className="text-zone">
                     <div className="greeting">

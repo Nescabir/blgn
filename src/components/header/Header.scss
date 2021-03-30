@@ -1,6 +1,7 @@
 @import '../../utils/utils';
 
 header {
+    z-index: 999;
     border-top: 2px solid $accent-color;
     top: 0;
     position: sticky;
@@ -11,6 +12,9 @@ header {
     flex-wrap: wrap;
     padding: 15px 10%;
     align-items: center;
+    .logo {
+        margin-right: 30px;
+    }
     .nav {
         display: flex;
         flex-direction: row;

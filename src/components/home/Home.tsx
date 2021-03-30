@@ -7,8 +7,8 @@ function Home() {
     return (
         <div className="home">
             <Intro />
-            <About />
             <Skills />
+            <About />
         </div>
     );
 }

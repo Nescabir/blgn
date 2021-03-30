@@ -1,0 +1,37 @@
+@import '../../../utils/utils';
+
+.dotIcon {
+    color: white;
+}
+
+.experience {
+    display: block;
+    margin-top: -18px;
+    .title {
+        font-size: 18pt;
+    }
+    & > .details {
+        & > div {
+            font-family: "Prompt";
+            font-size: 10pt;
+            display: inline;
+            color: rgba(white, 0.4);
+            position: relative;
+            margin: 0 5px;
+            &:first-child {
+                margin-left: 0;
+                &::before {
+                    background-color: transparent;
+                }
+            }
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+    &:nth-child(even) {
+        & > .details {
+            text-align: right;
+        }
+    }
+}
