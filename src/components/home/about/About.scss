@@ -1,0 +1,40 @@
+@import '../../../utils/utils';
+
+.about {
+    display: block;
+    min-height: 50vh;
+    .title {
+        font-weight: 600;
+        font-family: "Prompt";
+        font-size: 32pt;
+        margin-bottom: 50px;
+    }
+    .container {
+        display: flex;
+        flex-direction: row;
+        .table {
+            flex-grow: 0;
+            font-size: 15pt;
+            line-height: 30px;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            min-width: 400px;
+            .table-item:nth-child(even) {
+                font-family: "Prompt";
+                color: rgba(white, 0.4)
+            }
+        }
+        .text-zone {
+            font-size: 16pt;
+            max-width: 800px;
+            .greeting {
+                font-family: "Prompt";
+                font-size: 28pt;
+            }
+            .description {
+                text-align: justify;
+                margin-bottom: 20px;
+            }
+        }
+    }
+}
