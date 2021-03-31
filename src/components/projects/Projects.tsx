@@ -33,7 +33,7 @@ function Projects() {
         {
             name: "PPE4",
             description: "Front-end app using Ruby on Rails and previous API (PPE3)",
-            image: "https://via.placeholder.com/200",
+            image: "http://paulgruson.fr/wp-content/uploads/2016/03/rubyrails.png",
             link: "https://github.com/Nescabir/PPE4",
             type: projectType.SCHOOL,
             date: [new Date("2019-01-01")],
@@ -41,7 +41,7 @@ function Projects() {
         {
             name: "PPE3",
             description: "REST API based using Symfony and Swagger",
-            image: "https://via.placeholder.com/200",
+            image: "https://kinsta.com/wp-content/uploads/2018/05/what-is-php-3-1.png",
             link: "https://github.com/Nescabir/API-REST-EGC",
             type: projectType.SCHOOL,
             date: [new Date("2018-01-01"), new Date("2019-01-01")],
@@ -49,7 +49,7 @@ function Projects() {
         {
             name: "PPE2",
             description: "Jingle contest website based using PHP",
-            image: "https://via.placeholder.com/200",
+            image: "https://kinsta.com/wp-content/uploads/2018/05/what-is-php-3-1.png",
             link: "https://github.com/Nescabir/PPE2",
             type: projectType.SCHOOL,
             date: [new Date("2018-01-01")],
@@ -57,7 +57,7 @@ function Projects() {
         {
             name: "PPE1",
             description: "Static single page website for a fake museum",
-            image: "https://via.placeholder.com/200",
+            image: "https://grafikart.fr/uploads/attachments/2017/508-600a91df43655220452798.jpg",
             link: "https://github.com/Nescabir/PPE1",
             type: projectType.SCHOOL,
             date: [new Date("2017-01-01")],
