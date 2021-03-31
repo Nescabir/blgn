@@ -298,14 +298,13 @@ function Skills() {
                                                 <div className="company">
                                                     { experience.company }
                                                 </div>
+                                                -
                                                 <div className="location">
                                                     { experience.location }
                                                 </div>
-                                                <div className="startDate">
-                                                    { experience.startDate.getFullYear() }/{ experience.startDate.getUTCMonth() + 1 }
-                                                </div>
-                                                <div className="endDate">
-                                                    {(
+                                                -
+                                                <div className="period">
+                                                    { experience.startDate.toLocaleString('default', { month: 'long'}) } { experience.startDate.getFullYear() } to {(
                                                         () => {
                                                             if (typeof(experience.endDate) === 'string') {
                                                                 return (
@@ -314,7 +313,7 @@ function Skills() {
                                                             }
 
                                                             return (
-                                                                experience.endDate.getFullYear() + "/" + (experience.endDate.getMonth() + 1)
+                                                                experience.endDate.toLocaleString('default', { month: 'long'}) + " " + experience.endDate.getFullYear()
                                                             )
                                                         }
                                                     )()}

@@ -43,24 +43,20 @@ function Experience({ experience }: ExperienceProps) {
                             { experience.location }
                         </div>
                         -
-                        <div className="startDate">
-                            { experience.startDate.getFullYear() }/{ experience.startDate.getUTCMonth() + 1 }
-                        </div>
-                        -
-                        <div className="endDate">
-                            {(
-                                () => {
-                                    if (typeof(experience.endDate) === 'string') {
-                                        return (
-                                            experience.endDate
-                                        );
-                                    }
+                        <div className="period">
+                            { experience.startDate.toLocaleString('default', { month: 'long'}) } { experience.startDate.getFullYear() } to {(
+                                                        () => {
+                                                            if (typeof(experience.endDate) === 'string') {
+                                                                return (
+                                                                    experience.endDate
+                                                                );
+                                                            }
 
-                                    return (
-                                        experience.endDate.getFullYear() + "/" + (experience.endDate.getMonth() + 1)
-                                    )
-                                }
-                            )()}
+                                                            return (
+                                                                experience.endDate.toLocaleString('default', { month: 'long'}) + " " + experience.endDate.getFullYear()
+                                                            )
+                                                        }
+                                                    )()}
                         </div>
                     </div>
                 </div>
