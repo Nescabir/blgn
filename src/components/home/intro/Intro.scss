@@ -54,3 +54,35 @@
         }
     }
 }
+
+@media (max-width: 1024px) {
+    .intro {
+        .heading {
+            .avatar {
+                display: none;
+            }
+            .name {
+                text-align: center;
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    .intro {
+        .heading {
+            .name {
+                font-size: 20pt;
+                .initial {
+                    font-size: 60pt;
+                }
+                .highlight {
+                    font-size: 30pt;
+                }
+            }
+        }
+        .subheading {
+            font-size: 16pt;
+        }
+    }
+}

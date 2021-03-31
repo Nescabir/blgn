@@ -69,3 +69,17 @@ header {
         }
     }
 }
+
+@media (max-width: 650px) {
+    header {
+        .logo {
+            display: none;
+        }
+        .nav {
+            justify-content: center;
+        }
+        .socials {
+            display: none;
+        }
+    }
+}

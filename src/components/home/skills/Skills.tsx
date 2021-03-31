@@ -4,6 +4,8 @@ import Experience from "../experience/Experience";
 import { Timeline } from '@material-ui/lab';
 import "./Skills.scss";
 import ILangs from "../../../models/ILangs";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBriefcase, faGraduationCap } from '@fortawesome/free-solid-svg-icons';
 
 function Skills() {
     const experiences: IExperiences[] = [
@@ -256,15 +258,74 @@ function Skills() {
                     </div>
                 </div>
                 <div className="curriculum">
-                    <Timeline align="alternate">
-                    { 
-                        experiences.map((experience, index) => {
-                            return (
-                                <Experience experience={experience} key={index} />
-                            )
-                        })
-                    }
-                    </Timeline>
+                    <div className="desktop">
+                        <Timeline align="alternate">
+                        { 
+                            experiences.map((experience, index) => {
+                                return (
+                                    <Experience experience={experience} key={index} />
+                                )
+                            })
+                        }
+                        </Timeline>
+                    </div>
+                    <div className="mobile">
+                        <div className="title">Experiences</div>
+                        { 
+                            experiences.map((experience, index) => {
+                                return (
+                                    <div className="experience-mobile">
+                                        <div className="ico">
+                                            {(
+                                                () => {
+                                                    if (experience.type !== ExperienceType.PROFESSIONAL) {
+                                                        return (
+                                                            <FontAwesomeIcon icon={faGraduationCap} className="icon educ" size="2x" />
+                                                        );
+                                                    }
+                                                    
+                                                    return (
+                                                        <FontAwesomeIcon icon={faBriefcase} className="icon prof" size="2x" />
+                                                    );
+                                                }
+                                            )()}
+                                        </div>
+                                        <div className="details">
+                                            <div className="title">
+                                                {experience.name}
+                                            </div>
+                                            <div className="data">
+                                                <div className="company">
+                                                    { experience.company }
+                                                </div>
+                                                <div className="location">
+                                                    { experience.location }
+                                                </div>
+                                                <div className="startDate">
+                                                    { experience.startDate.getFullYear() }/{ experience.startDate.getUTCMonth() + 1 }
+                                                </div>
+                                                <div className="endDate">
+                                                    {(
+                                                        () => {
+                                                            if (typeof(experience.endDate) === 'string') {
+                                                                return (
+                                                                    experience.endDate
+                                                                );
+                                                            }
+
+                                                            return (
+                                                                experience.endDate.getFullYear() + "/" + (experience.endDate.getMonth() + 1)
+                                                            )
+                                                        }
+                                                    )()}
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                )
+                            })
+                        }
+                    </div>
                 </div>
             </div>
         </div>

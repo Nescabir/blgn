@@ -39,3 +39,20 @@
         }
     }
 }
+
+@media (max-width: 1024px) {
+    .about {
+        .container {
+            flex-direction: column;
+            .table {
+                grid-template-columns: 1fr;
+                margin-bottom: 25px;
+            }
+            .text-zone {
+                .description {
+                    font-size: 14pt;
+                }
+            }
+        }
+    }
+}

@@ -1,8 +1,67 @@
 @import '../../../utils/utils';
 
+.desktop {
+    display: block;
+}
+
+.mobile {
+    & > .title {
+        font-size: 16pt;
+        margin-bottom: 15px;
+    }
+    display: none;
+    .experience-mobile {
+        display: flex;
+        flex-direction: row;
+        // border: 1px solid white;
+        height: 70px;
+        .ico {
+            display: flex;
+            width: 20%;
+            min-width: 20%;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            .icon {
+                &.educ {
+                    color: $secondary-color;
+                }
+                &.prof {
+                    color: $accent-color;
+                }
+            }
+        }
+        .details {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            .data {
+                display: flex;
+                flex-direction: row;
+                flex-wrap: 1;
+                & > div {
+                    font-family: "Prompt";
+                    font-size: 8pt;
+                    color: rgba(white, 0.4);
+                    position: relative;
+                    margin: 0 5px;
+                    &:first-child {
+                        margin-left: 0;
+                        &::before {
+                            background-color: transparent;
+                        }
+                    }
+                    &:last-child {
+                        margin-right: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
 .skills {
     display: block;
-    min-height: 50vh;
     & > .title {
         font-weight: 600;
         font-family: "Prompt";
@@ -59,6 +118,7 @@
         .curriculum {
             display: flex;
             flex-direction: column;
+            flex-basis: auto;
             & > .title {
                 font-size: 24pt;
                 margin-bottom: 25px;
@@ -68,8 +128,28 @@
 }
 
 @media (max-width: 1034px) {
+    .desktop {
+        display: none;
+    }
+    .mobile {
+        display: block;
+    }
     .container {
         grid-template-columns: 1fr !important;
-        grid-template-rows: 1fr 1fr;
+        // grid-template-rows: 1fr 1fr;
+    }
+}
+
+@media (max-width: 600px) {
+    
+    .soft {
+        .childrens {
+            display: flex;
+            justify-content: space-between;
+            .skill {
+                margin: 0 !important;
+                // min-width: 100px;
+            }
+        }
     }
 }
