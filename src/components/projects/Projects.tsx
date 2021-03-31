@@ -8,7 +8,7 @@ function Projects() {
     const projects: IProjects[] = [
         {
             name: "Portfolio",
-            description: "First React project, redesign and remake of my portfolio (This porfolio)",
+            description: "First React project, redesign and remake of my portfolio (this porfolio)",
             image: "https://imgur.com/wuMJWZI.png",
             link: "https://github.com/Nescabir/blgn",
             type: projectType.PERSONAL,
@@ -32,16 +32,24 @@ function Projects() {
         },
         {
             name: "PPE4",
-            description: "Front-end app using Ruby on Rails and previous API (PPE3)",
-            image: "http://paulgruson.fr/wp-content/uploads/2016/03/rubyrails.png",
+            description: "Front-end app using Ruby on Rails and previous API",
+            image: "https://i.imgur.com/wgR3ElJ.png",
             link: "https://github.com/Nescabir/PPE4",
             type: projectType.SCHOOL,
             date: [new Date("2019-01-01")],
         },
         {
             name: "PPE3",
+            description: "Winform application using C# and previous API",
+            image: "https://blog.cellenza.com/wp-content/uploads/2017/02/CSharpLogo.png",
+            link: "https://github.com/Nescabir/PPE3",
+            type: projectType.SCHOOL,
+            date: [new Date("2018-01-01"), new Date("2019-01-01")],
+        },
+        {
+            name: "EG Corp. API",
             description: "REST API based using Symfony and Swagger",
-            image: "https://kinsta.com/wp-content/uploads/2018/05/what-is-php-3-1.png",
+            image: "https://i.imgur.com/wgR3ElJ.png",
             link: "https://github.com/Nescabir/API-REST-EGC",
             type: projectType.SCHOOL,
             date: [new Date("2018-01-01"), new Date("2019-01-01")],
