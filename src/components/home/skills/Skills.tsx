@@ -274,7 +274,7 @@ function Skills() {
                         { 
                             experiences.map((experience, index) => {
                                 return (
-                                    <div className="experience-mobile">
+                                    <div className="experience-mobile" key={index}>
                                         <div className="ico">
                                             {(
                                                 () => {

@@ -7,7 +7,6 @@ function Project({ project }: ProjectProps) {
     return (
         <a href={project.link} target="_blank" rel="noreferrer" className="project">
             <div className={"type " + project.type}>
-                {/* {project.type} */}
             </div>
             <div className="image" style={{ backgroundImage: `url(${project.image})` }} >
             </div>

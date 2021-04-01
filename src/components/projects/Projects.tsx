@@ -1,10 +1,11 @@
+import { useState } from 'react';
 import IProjects from '../../models/IProjects';
 import { projectType } from '../../models/projectType.enum';
 import Project from './project/Project';
 import './Projects.scss';
 
 function Projects() {
-
+    // let typeFilter: projectType | string = "ALL";
     const projects: IProjects[] = [
         {
             name: "Portfolio",
@@ -80,14 +81,33 @@ function Projects() {
         },
     ];
 
+    const [typeFilter, setTypeFilter] = useState("ALL");
+
+    function handleTypeChange(changeEvent: React.ChangeEvent<HTMLInputElement>) {
+        setTypeFilter(changeEvent.target.value);
+    }
+
     return (
         <div className="projects">
             <div className="title">
                 Projects
             </div>
+            <div className="filters">
+                <input type="radio" name="type" id="ALL" value="ALL" onChange={handleTypeChange} className="ALL" defaultChecked />
+                <label htmlFor="ALL"></label>
+                <input type="radio" name="type" id="PERSONAL" value={projectType.PERSONAL} className={projectType.PERSONAL} onChange={handleTypeChange} />
+                <label htmlFor="PERSONAL"></label>
+                <input type="radio" name="type" id="SCHOOL" value={projectType.SCHOOL} className={projectType.SCHOOL} onChange={handleTypeChange} />
+                <label htmlFor="SCHOOL"></label>
+            </div>
             <div className="inner">
                 {
-                    projects.map((project, index) => {
+                    projects.filter((project) => {
+                        if (typeFilter === "ALL") {
+                            return true
+                        }
+                        return project.type === typeFilter
+                    }).map((project, index) => {
                         return (
                             <Project project={project} key={index} />
                         )
@@ -97,5 +117,6 @@ function Projects() {
         </div>
     );
 }
+
 
 export default Projects

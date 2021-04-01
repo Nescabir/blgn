@@ -12,13 +12,7 @@
     transition: all 0.1s ease-in-out;
     .type {
         border-radius: 4px 0 0 4px;
-        display: flex;
-        text-align: center;
-        text-orientation: sideways;
-        writing-mode: vertical-lr;
         width: 10px;
-        justify-content: center;
-        align-items: center;
         &.PERSONAL {
             background-color: $accent-color;
         }

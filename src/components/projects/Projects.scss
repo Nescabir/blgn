@@ -7,6 +7,59 @@
         font-size: 32pt;
         margin-bottom: 50px;
     }
+    & > .filters {
+        display: flex;
+        margin-bottom: 25px;
+        input[type=radio] {
+            display: none;
+            &:checked + label {
+                background-color: white;
+                color: BLACK;
+                font-weight: 600;
+            }
+            &:checked.PERSONAL + label {
+                background-color: $accent-color;
+                color: white;
+            }
+            &:checked.SCHOOL + label {
+                background-color: $secondary-color;
+                color: white;
+            }
+            &.PERSONAL + label {
+                &::before {
+                    content: "Personal";
+                }
+                border-color: $accent-color;
+                color: $accent-color;
+            }
+            &.SCHOOL + label {
+                &::before {
+                    content: "School";
+                }
+                border-color: $secondary-color;
+                color: $secondary-color;
+            }
+        }
+        label {
+            &::before {
+                content: "All";
+            }
+            min-width: 25px;
+            text-align: center;
+            color: white;
+            cursor: pointer;
+            padding: 7px 10px;
+            border: 2px solid white;
+            border-radius: 25px;
+            margin: 0 10px;
+            &:first-child {
+                margin-left: 0;
+            }
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
     & > .inner {
         display: grid;
         grid-template-columns: 1fr 1fr;
@@ -20,6 +73,13 @@
     .projects {
         & > .inner {
             grid-template-columns: 1fr;
+        }
+        & > .filters {
+            input[type=radio] {
+                &:checked + label {
+                    font-weight: 400;
+                }
+            }
         }
     }
 }
