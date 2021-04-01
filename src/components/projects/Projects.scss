@@ -13,15 +13,24 @@
         input[type=radio] {
             display: none;
             &:checked + label {
+                &:hover {
+                    background-color: rgba(white, 1);
+                }
                 background-color: white;
                 color: BLACK;
                 font-weight: 600;
             }
             &:checked.PERSONAL + label {
+                &:hover {
+                    background-color: rgba($accent-color, 1);
+                }
                 background-color: $accent-color;
                 color: white;
             }
             &:checked.SCHOOL + label {
+                &:hover {
+                    background-color: rgba($secondary-color, 1);
+                }
                 background-color: $secondary-color;
                 color: white;
             }
@@ -29,12 +38,18 @@
                 &::before {
                     content: "Personal";
                 }
+                &:hover {
+                    background-color: rgba($accent-color, 0.4);
+                }
                 border-color: $accent-color;
                 color: $accent-color;
             }
             &.SCHOOL + label {
                 &::before {
                     content: "School";
+                }
+                &:hover {
+                    background-color: rgba($secondary-color, 0.4);
                 }
                 border-color: $secondary-color;
                 color: $secondary-color;
@@ -58,6 +73,10 @@
             &:last-child {
                 margin-right: 0;
             }
+            &:hover {
+                background-color: rgba(white, 0.4);
+            }
+            transition: all 0.3s ease-in-out;
         }
     }
     & > .inner {
