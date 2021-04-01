@@ -5,7 +5,6 @@ import Project from './project/Project';
 import './Projects.scss';
 
 function Projects() {
-    // let typeFilter: projectType | string = "ALL";
     const projects: IProjects[] = [
         {
             name: "Portfolio",
@@ -13,7 +12,7 @@ function Projects() {
             image: "https://imgur.com/wuMJWZI.png",
             link: "https://github.com/Nescabir/blgn",
             type: projectType.PERSONAL,
-            date: [new Date("2019-01-01")],
+            date: [new Date("2021-01-01")],
         },
         {
             name: "<IS THIS PROGRESS>",
@@ -21,7 +20,7 @@ function Projects() {
             image: "https://i.imgur.com/VwJbG4g.png",
             link: "https://isthisprogress.fr/",
             type: projectType.PERSONAL,
-            date: [new Date("2019-01-01")],
+            date: [new Date("2020-01-01")],
         },
         {
             name: "HLTVBot",
@@ -80,7 +79,6 @@ function Projects() {
             date: [new Date("2017-01-01")],
         },
     ];
-
     const [typeFilter, setTypeFilter] = useState("ALL");
 
     function handleTypeChange(changeEvent: React.ChangeEvent<HTMLInputElement>) {
