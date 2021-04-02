@@ -4,12 +4,21 @@ import { projectType } from '../../models/projectType.enum';
 import Project from './project/Project';
 import './Projects.scss';
 
+import bouncingballs from '../../assets/bouncingballs.jpg';
+import html from "../../assets/html.jpg";
+import php from '../../assets/php.jpg';
+import csharp from '../../assets/csharp.jpg';
+import hltvbot from '../../assets/hltvbot.jpg';
+import BLGN from '../../assets/BLGN.jpg';
+import EGC from '../../assets/EGC.jpg';
+import ITP from '../../assets/ITP.jpg';
+
 function Projects() {
     const projects: IProjects[] = [
         {
             name: "Portfolio",
             description: "First React project, redesign and remake of my portfolio (this porfolio)",
-            image: "https://imgur.com/wuMJWZI.png",
+            image: BLGN,
             link: "https://github.com/Nescabir/blgn",
             type: projectType.PERSONAL,
             date: [new Date("2021-01-01")],
@@ -17,7 +26,7 @@ function Projects() {
         {
             name: "<IS THIS PROGRESS>",
             description: "World of Warcraft guild's website using Angular and Express",
-            image: "https://i.imgur.com/VwJbG4g.png",
+            image: ITP,
             link: "https://isthisprogress.fr/",
             type: projectType.PERSONAL,
             date: [new Date("2020-01-01")],
@@ -25,7 +34,7 @@ function Projects() {
         {
             name: "HLTVBot",
             description: "Discord BOT developed with discord.js library",
-            image: "https://top.gg/images/dblnew.png",
+            image: hltvbot,
             link: "https://github.com/Nescabir/HLTVBot",
             type: projectType.PERSONAL,
             date: [new Date("2019-01-01")],
@@ -33,7 +42,7 @@ function Projects() {
         {
             name: "PPE4",
             description: "Front-end app using Ruby on Rails and previous API",
-            image: "https://i.imgur.com/wgR3ElJ.png",
+            image: EGC,
             link: "https://github.com/Nescabir/PPE4",
             type: projectType.SCHOOL,
             date: [new Date("2019-01-01")],
@@ -41,7 +50,7 @@ function Projects() {
         {
             name: "PPE3",
             description: "Winform application using C# and previous API",
-            image: "https://blog.cellenza.com/wp-content/uploads/2017/02/CSharpLogo.png",
+            image: csharp,
             link: "https://github.com/Nescabir/PPE3",
             type: projectType.SCHOOL,
             date: [new Date("2018-01-01"), new Date("2019-01-01")],
@@ -49,7 +58,7 @@ function Projects() {
         {
             name: "EG Corp. API",
             description: "REST API based using Symfony and Swagger",
-            image: "https://i.imgur.com/wgR3ElJ.png",
+            image: EGC,
             link: "https://github.com/Nescabir/API-REST-EGC",
             type: projectType.SCHOOL,
             date: [new Date("2018-01-01"), new Date("2019-01-01")],
@@ -57,7 +66,7 @@ function Projects() {
         {
             name: "PPE2",
             description: "Jingle contest website based using PHP",
-            image: "https://kinsta.com/wp-content/uploads/2018/05/what-is-php-3-1.png",
+            image: php,
             link: "https://github.com/Nescabir/PPE2",
             type: projectType.SCHOOL,
             date: [new Date("2018-01-01")],
@@ -65,7 +74,7 @@ function Projects() {
         {
             name: "PPE1",
             description: "Static single page website for a fake museum",
-            image: "https://grafikart.fr/uploads/attachments/2017/508-600a91df43655220452798.jpg",
+            image: html,
             link: "https://github.com/Nescabir/PPE1",
             type: projectType.SCHOOL,
             date: [new Date("2017-01-01")],
@@ -73,7 +82,7 @@ function Projects() {
         {
             name: "Bouncing Balls",
             description: "Simple ball movement on Processing",
-            image: "https://www.accesscodeschool.fr/wp-content/uploads/2018/11/processing.jpg",
+            image: bouncingballs,
             link: "https://gist.github.com/Nescabir/661877531bafd884093433cf03eef441",
             type: projectType.PERSONAL,
             date: [new Date("2017-01-01")],

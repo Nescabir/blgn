@@ -1,7 +1,9 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import './Intro.scss'
+import webp from '../../../assets/face.webp';
+import jpg from '../../../assets/face.jpg';
+import 'devicon/devicon.min.css';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faTwitterSquare, faLinkedin, faGithubSquare } from '@fortawesome/free-brands-svg-icons';
-import avatar from '../../../assets/face.webp';
 
 function Intro() {
 
@@ -9,7 +11,11 @@ function Intro() {
         <div className="intro" id="intro">
             <div className="heading">
                 <div className="avatar">
-                    <img src={ avatar } alt="AVATAR"/>
+                    <picture>
+                        <source srcSet={webp} type="image/webp" />
+                        {/* <source srcSet={jpg} type="image/jpg" /> */}
+                        <img src={jpg} alt="My face"/>
+                    </picture>
                 </div>
                 <div className="name">
                     <span className="initial">Hi!</span> My name is <span className="highlight">Baptiste Boulongne</span>.
