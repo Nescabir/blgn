@@ -1,5 +1,5 @@
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,
   Switch,
   Route
 } from 'react-router-dom';
@@ -10,10 +10,12 @@ import Home from './components/home/Home';
 import NoMatch from './components/noMatch/NoMatch';
 import Projects from './components/projects/Projects';
 
+// const history = createBrowserHistory();
+
 function App() {
   return (
     <div className="App">
-      <Router>
+      <Router basename="/">
         <Header />
           <div className="app-wrapper">
             <Switch>
