@@ -1,9 +1,9 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import './Intro.scss'
 import { faTwitterSquare, faLinkedin, faGithubSquare } from '@fortawesome/free-brands-svg-icons';
+import avatar from '../../../assets/face.webp';
 
 function Intro() {
-    const avatar = "https://i.pravatar.cc/200?img=12"
 
     return (
         <div className="intro" id="intro">

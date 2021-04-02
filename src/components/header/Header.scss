@@ -5,8 +5,8 @@ header {
     border-top: 2px solid $accent-color;
     top: 0;
     position: sticky;
-    position: -webkit-sticky;
-    background: $background-color;
+    background: rgba($background-color, 0.6);
+    backdrop-filter: blur(10px);
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

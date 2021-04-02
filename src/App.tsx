@@ -15,17 +15,19 @@ function App() {
     <div className="App">
       <Router>
         <Header />
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route exact path="/projects">
-            <Projects />
-          </Route>
-          <Route path="*">
-            <NoMatch />
-          </Route>
-        </Switch>
+          <div className="app-wrapper">
+            <Switch>
+                <Route exact path="/">
+                  <Home />
+                </Route>
+                <Route exact path="/projects">
+                  <Projects />
+                </Route>
+                <Route path="*">
+                  <NoMatch />
+                </Route>
+            </Switch>
+          </div>
         <Footer />
       </Router>
     </div>
