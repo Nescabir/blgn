@@ -7,6 +7,7 @@ function Footer() {
             <div className="copy">
                 <p>&copy; { year } BLGN.</p>
             </div>
+            <div id="wcb" className="carbonbadge wcb-d"></div>
         </footer>
     );
 }
