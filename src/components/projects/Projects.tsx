@@ -34,7 +34,7 @@ function Projects() {
         },
         {
             name: "<IS THIS PROGRESS>",
-            description: "World of Warcraft guild's website using Angular and Express",
+            description: "World of Warcraft guild's website using Ruby on Rails",
             image: ITP,
             link: "https://isthisprogress.fr/",
             type: projectType.PERSONAL,
