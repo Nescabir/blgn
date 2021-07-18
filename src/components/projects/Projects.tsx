@@ -12,9 +12,18 @@ import hltvbot from '../../assets/hltvbot.jpg';
 import BLGN from '../../assets/BLGN.jpg';
 import EGC from '../../assets/EGC.jpg';
 import ITP from '../../assets/ITP.jpg';
+import FACEIT from "../../assets/faceit13h.png";
 
 function Projects() {
     const projects: IProjects[] = [
+        {
+            name: "FACEIT 13H",
+            description: "FACEIT random team name generator",
+            image: FACEIT,
+            link: "https://github.com/Nescabir/faceit13h",
+            type: projectType.PERSONAL,
+            date: [new Date("2021-01-01")],
+        },
         {
             name: "Portfolio",
             description: "First React project, redesign and remake of my portfolio (this porfolio)",
